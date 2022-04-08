@@ -1,0 +1,49 @@
+header:
+  version: 11
+
+repos:
+  meta-fobnail:
+    layers:
+      meta-fobnail-bsp:
+      meta-fobnail-distro:
+
+  poky:
+    url: https://git.yoctoproject.org/git/poky
+    refspec: a5dea17662d6e91b662a0db2148474abb12e3475
+    layers:
+      meta:
+      meta-poky:
+      meta-yocto-bsp:
+
+  meta-openembedded:
+    url: https://git.openembedded.org/meta-openembedded
+    refspec: de18681d7dd27000c132bc68f9fa267e8f5a2348
+    layers:
+      meta-oe:
+      meta-networking:
+      meta-python:
+
+  meta-pcengines:
+    url: https://github.com/3mdeb/meta-pcengines
+    refspec: 75b4f3f8fde5294862ebf6e3298c9889632c29df
+
+bblayers_conf_header:
+  standard: |
+    POKY_BBLAYERS_CONF_VERSION = "2"
+    BBPATH = "${TOPDIR}"
+    BBFILES ?= ""
+local_conf_header:
+  standard: |
+    CONF_VERSION = "2"
+    PACKAGE_CLASSES = "package_rpm"
+    SDKMACHINE = "x86_64"
+  diskmon: |
+    BB_DISKMON_DIRS = "\
+        STOPTASKS,${TMPDIR},1G,100K \
+        STOPTASKS,${DL_DIR},1G,100K \
+        STOPTASKS,${SSTATE_DIR},1G,100K \
+        STOPTASKS,/tmp,100M,100K \
+        ABORT,${TMPDIR},100M,1K \
+        ABORT,${DL_DIR},100M,1K \
+        ABORT,${SSTATE_DIR},100M,1K \
+        ABORT,/tmp,10M,1K"
