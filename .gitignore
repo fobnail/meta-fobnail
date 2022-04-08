@@ -1,0 +1,5 @@
+build/
+poky/
+meta-openembedded/
+meta-pcengines/
+meta-trenchboot/
