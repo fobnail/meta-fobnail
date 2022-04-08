@@ -27,6 +27,10 @@ repos:
     url: https://github.com/3mdeb/meta-pcengines
     refspec: 75b4f3f8fde5294862ebf6e3298c9889632c29df
 
+  meta-trenchboot:
+    url: https://github.com/3mdeb/meta-trenchboot
+    refspec: 4211d999048d29be72781264132e83ec7dd0e33c
+
 bblayers_conf_header:
   standard: |
     POKY_BBLAYERS_CONF_VERSION = "2"
