@@ -24,12 +24,12 @@ repos:
       meta-python:
 
   meta-pcengines:
-    url: https://github.com/3mdeb/meta-pcengines
+    url: git@github.com:3mdeb/meta-pcengines.git
     refspec: 75b4f3f8fde5294862ebf6e3298c9889632c29df
 
   meta-trenchboot:
-    url: https://github.com/3mdeb/meta-trenchboot
-    refspec: 4211d999048d29be72781264132e83ec7dd0e33c
+    url: git@github.com:3mdeb/meta-trenchboot.git
+    refspec: 71082d57a85587565bdcc1ac5888168b6a2f26af
 
 bblayers_conf_header:
   standard: |
