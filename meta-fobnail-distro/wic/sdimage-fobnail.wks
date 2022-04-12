@@ -2,5 +2,5 @@
 # long-description: Creates a partitioned system image for use with
 # pcengines-apu2. Boot files are located in the first vfat partition.
 
-part /boot  --source bootimg-partition --ondisk mmcblk0 --fstype=vfat --label boot   --align 4096 --fixed-size 64  --active
+part /boot  --source bootimg-grub-tb --ondisk mmcblk0 --fstype=vfat --label boot   --align 4096 --fixed-size 64  --active
 part /      --source rootfs            --ondisk mmcblk0 --fstype=ext4 --label rootfs --align 4096 --fixed-size 512
