@@ -1,0 +1,9 @@
+header:
+  version: 11
+  includes:
+    - kas/common.yml
+
+distro: fobnail-distro
+machine: fobnail-machine
+target:
+  - fobnail-base-image-debug
