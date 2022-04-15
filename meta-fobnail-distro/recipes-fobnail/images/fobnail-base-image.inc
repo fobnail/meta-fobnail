@@ -11,7 +11,7 @@ IMAGE_INSTALL:append = " \
 "
 
 do_image_wic[depends] += " \
-  secure-kernel-loader:do_deploy \
+  landing-zone:do_deploy \
 "
 
 WKS_FILE_DEPENDS:remove = "grub-efi"
