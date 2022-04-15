@@ -25,11 +25,11 @@ repos:
 
   meta-pcengines:
     url: https://github.com/3mdeb/meta-pcengines
-    refspec: 75b4f3f8fde5294862ebf6e3298c9889632c29df
+    refspec: 1d8b68e24fda87c791dd87e1d9e2322c5581b5e9
 
   meta-trenchboot:
     url: https://github.com/3mdeb/meta-trenchboot
-    refspec: 4211d999048d29be72781264132e83ec7dd0e33c
+    refspec: a94cce77204f7008bc240c3745d04b7ff9f8f579
 
 bblayers_conf_header:
   standard: |
