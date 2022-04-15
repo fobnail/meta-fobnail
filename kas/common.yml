@@ -29,7 +29,7 @@ repos:
 
   meta-trenchboot:
     url: https://github.com/3mdeb/meta-trenchboot
-    refspec: a94cce77204f7008bc240c3745d04b7ff9f8f579
+    refspec: 8d9e0498b96f9e0313385f6a7138ca93135e6bd2
 
 bblayers_conf_header:
   standard: |
