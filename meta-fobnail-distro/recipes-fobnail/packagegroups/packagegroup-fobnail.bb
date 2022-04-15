@@ -13,5 +13,4 @@ RDEPENDS:${PN}-system = " \
   packagegroup-core-base-utils \
   chrony \
   chronyc \
-  secure-kernel-loader \
 "
