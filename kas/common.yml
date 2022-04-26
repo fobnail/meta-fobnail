@@ -22,6 +22,7 @@ repos:
       meta-oe:
       meta-networking:
       meta-python:
+      meta-perl:
 
   meta-pcengines:
     url: https://github.com/3mdeb/meta-pcengines
@@ -30,6 +31,12 @@ repos:
   meta-trenchboot:
     url: https://github.com/3mdeb/meta-trenchboot
     refspec: 56790fc536b3d8da482f92598a65eb7967332361
+
+  meta-security:
+    url: https://git.yoctoproject.org/git/meta-security
+    refspec: fb77606aef461910db4836bad94d75758cc2688c
+    layers:
+      meta-tpm:
 
 bblayers_conf_header:
   standard: |
