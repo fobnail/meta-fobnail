@@ -14,9 +14,4 @@ RDEPENDS:${PN}-system = " \
   chrony \
   chronyc \
   tpm2-tools \
-  tpm2-tss \
-  tpm2-abrmd \
-  libtss2-mu \
-  libtss2-tcti-device \
-  libtss2-tcti-mssim \
 "
