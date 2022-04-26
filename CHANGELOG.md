@@ -1,6 +1,6 @@
 # Changelog
-Description of changes in meta layers for system image used in fobnail project.
-Able to run on PC Engines apu2.
+Description of changes in meta layers for system image used in the Fobnail
+Project. Able to run on PC Engines apu2.
 
 ## [Unreleased]
 
@@ -12,9 +12,7 @@ Able to run on PC Engines apu2.
 ## [0.1.1] - 2022-04-13
 ### Added
 
-- Initial version of meta layer for system image used in fobnail project
-
-
+- Initial version of meta layer for system image used in the Fobnail Project
 
 [Unreleased]: https://github.com/fobnail/meta-fobnail/compare/v0.1.1...HEAD
 [0.1.1]: https://github.com/fobnail/meta-fobnail/compare/v0.1.0...v0.1.1
