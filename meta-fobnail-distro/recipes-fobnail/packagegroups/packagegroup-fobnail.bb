@@ -14,4 +14,12 @@ RDEPENDS:${PN}-system = " \
   chrony \
   chronyc \
   tpm2-tools \
+  fobnail-attester \
 "
+
+#  fobnail-attester 
+
+
+#IMAGE_INSTALL += " 
+#  fobnail-attester 
+#"
