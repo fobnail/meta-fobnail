@@ -16,10 +16,3 @@ RDEPENDS:${PN}-system = " \
   tpm2-tools \
   fobnail-attester \
 "
-
-#  fobnail-attester 
-
-
-#IMAGE_INSTALL += " 
-#  fobnail-attester 
-#"
