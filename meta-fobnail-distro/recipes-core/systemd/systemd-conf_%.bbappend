@@ -1,8 +1,10 @@
+FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
+
 SRC_URI += " \
     file://fobnail_usb.network \
 "
 
-NETWORKCONFDIR = "$sysconfdir/systemd/network"
+NETWORKCONFDIR = "${sysconfdir}/systemd/network"
 
 do_install:append(){
     # this append removes unused systemd configs that overrides our
