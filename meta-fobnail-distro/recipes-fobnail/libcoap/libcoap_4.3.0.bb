@@ -6,7 +6,7 @@ DESCRIPTION = " \
 
 HOMEPAGE = "https://libcoap.net"
 
-LICENSE = "BSD 2-Clause"
+LICENSE = "BSD-2-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=e44b3af4925ec58e9f49b9ff143b5493 \
                     file://COPYING;md5=faed8f005d476edd3f250599a4bb9a75 \
                     file://ext/tinydtls/LICENSE;md5=ffb073dbb36e7ec5e091047332f302c5"

@@ -5,7 +5,7 @@ DESCRIPTION = " \
 
 HOMEPAGE = "https://github.com/laurencelundblade/QCBOR"
 
-LICENSE = "BSD-3-Clause license"
+LICENSE = "BSD-3-Clause"
 LIC_FILES_CHKSUM = ""
 
 SRC_URI = "git://github.com/laurencelundblade/QCBOR;protocol=https;branch=master"
