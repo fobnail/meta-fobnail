@@ -3,5 +3,7 @@
 PACKAGECONFIG:remove = "timesyncd"
 
 do_install:append() {
-    rm ${WORKDIR}/image/lib/systemd/network/*
+    # this append removes unused systemd configs that overrides our
+    #   fobnail token configuration
+    rm ${D}/lib/systemd/network/*
 }
