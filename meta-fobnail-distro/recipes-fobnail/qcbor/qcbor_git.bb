@@ -10,7 +10,6 @@ LIC_FILES_CHKSUM = "file://README.md;beginline=442;endline=463;md5=b55643261d6d2
 
 SRC_URI = "git://github.com/laurencelundblade/QCBOR;protocol=https;branch=master"
 
-PV = "1.0+git${SRCPV}"
 SRCREV = "44754f738c6534a4304a83d4c6e97b3d3193d887"
 
 S = "${WORKDIR}/git"
@@ -21,19 +20,13 @@ FILES:${PN} += " \
 
 INSANE_SKIP:${PN}-dev += "ldflags"
 
-inherit cmake autotools pkgconfig
+inherit pkgconfig
 
 CFLAGS += " \
     -DUSEFULBUF_DISABLE_ALL_FLOAT \
 "
 
-do_compile:prepend(){
-    cd ${S}
-}
-
 do_install(){
-    cd ${S}
-
     install -d ${D}${libdir}
     install -m 755 ${S}/libqcbor.a ${D}${libdir}/
 
