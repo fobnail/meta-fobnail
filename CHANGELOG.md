@@ -4,7 +4,7 @@ Project. Able to run on PC Engines apu2.
 
 ## [Unreleased]
 
-## [0.1.2] - 2022-05-04
+## [0.1.2] - 2022-05-06
 ### Added
 
 - Integration with `fobnail-attester`
