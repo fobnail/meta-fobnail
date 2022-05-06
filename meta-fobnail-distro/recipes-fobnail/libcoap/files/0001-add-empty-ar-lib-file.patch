@@ -1,0 +1,30 @@
+From 64033cbcc14fb60602c2b301b258e5648561eec0 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Tomasz=20=C5=BByjewski?= <tomasz.zyjewski@3mdeb.com>
+Date: Fri, 6 May 2022 15:24:28 +0200
+Subject: [PATCH] ar-lib: add empty ar-lib file as W/A for Yocto build problem
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Unfortunately, applying following patch
+https://github.com/obgm/libcoap/commit/0f76881802af5e06e6ee69e07e6c8aca7598adbf
+does not fix the problem. While do_configure bitbake requires
+an empty ar-lib file in the libcoap repository and only adding
+it at do_patch makes the package build successful every time.
+
+Signed-off-by: Tomasz Żyjewski <tomasz.zyjewski@3mdeb.com>
+---
+ ar-lib | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 ar-lib
+
+diff --git a/ar-lib b/ar-lib
+new file mode 100644
+index 000000000000..ca876db927da
+--- /dev/null
++++ b/ar-lib
+@@ -0,0 +1 @@
++Empty file for ar-lib compilation
+-- 
+2.25.1
+

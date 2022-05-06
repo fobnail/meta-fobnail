@@ -1,0 +1,71 @@
+From 6911be9722dd72ee9873a6dc8a60f20533c7d94e Mon Sep 17 00:00:00 2001
+From: Kas User <kas@example.com>
+Date: Mon, 2 May 2022 11:51:23 +0000
+Subject: [PATCH] Makefile: fix for build with Yocto
+
+---
+ Makefile | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 05677a4..8ca85b8 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,19 +1,19 @@
+ # Add _DEFAULT_SOURCE macro to avoid compiler errors for some GNU expressions
+-CFLAGS = -std=c99 -g -pedantic -Wall -Wextra -D_DEFAULT_SOURCE
++CFLAGS = -std=c99 -g -pedantic -Wall -Wextra -D_DEFAULT_SOURCE -lm
+
+ SRCDIR = src
+ INCDIR = include
+ OBJDIR = obj
+ BINDIR = bin
+-QCBORDIR = 3rdparty/QCBOR
++QCBORDIR = usr
+ 
+ LIBINCLUDE = -I/usr/include \
+              -I/usr/local/include \
+-             -I./$(QCBORDIR)/inc
++             -I./$(QCBORDIR)/include
+ 
+ LDPATH =     -L/usr/local/lib/ \
+              -L/usr/lib/x86_64-linux-gnu \
+-             -L./$(QCBORDIR)
++             -L./$(QCBORDIR)/lib64
+ 
+ LIBS =       coap-3 tss2-esys tss2-sys tss2-mu tss2-tctildr tss2-rc crypto
+ STATIC_LIBS = qcbor
+@@ -39,7 +39,7 @@ OBJECTS +=  $(addsuffix .o, $(OBJDIR)/tpm2-crypto $(OBJDIR)/meta_data $(OBJDIR)/
+ 
+ TARGETS = $(addprefix $(BINDIR)/, fobnail-attester)
+ 
+-EXTERNALS = $(addprefix $(QCBORDIR)/, libqcbor.a)
++#EXTERNALS = $(addprefix $(QCBORDIR)/, libqcbor.a)
+ 
+ .PHONY: all clean
+ 
+@@ -49,18 +49,18 @@ all: LDFLAGS = $(LDFLAGS_DYNAMIC) $(LDFLAGS_STATIC)
+ all: $(EXTERNALS) $(TARGETS)
+ 
+ $(BINDIR)/fobnail-attester: $(OBJECTS)
+-	$(CC) $^ $(CFLAGS) $(INCLUDE) $(LIBINCLUDE) $(LDPATH) $(LDFLAGS) -g -o $@
++	$(CC) $^ $(CFLAGS) $(LDFLAGS) -g -o $@
++# $(INCLUDE) $(LIBINCLUDE) $(LDPATH) 
+ 
+ ## --- objects ------------------------------------------------------------ ##
+ 
+-$(QCBORDIR)/libqcbor.a:
+-	$(MAKE) -C $(@D) $(@F) CMD_LINE="-DUSEFULBUF_DISABLE_ALL_FLOAT"
++#$(QCBORDIR)/libqcbor.a:
++#	$(MAKE) -C $(@D) $(@F) CMD_LINE="-DUSEFULBUF_DISABLE_ALL_FLOAT"
+ 
+ $(OBJDIR)/%.o: $(SRCDIR)/%.c
+ 	@mkdir -p $(@D)
+ 	$(CC) $< $(INCLUDE) $(LIBINCLUDE) $(LDPATH) $(LDFLAGS) $(CFLAGS) -g -o $@ -c
+ 
+ clean:
+-	$(MAKE) -C $(QCBORDIR) clean
+ 	$(RM) bin/*
+ 	$(RM) obj/*.*
+-- 
+2.30.2
