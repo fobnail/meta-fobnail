@@ -15,4 +15,5 @@ RDEPENDS:${PN}-system = " \
   chronyc \
   tpm2-tools \
   fobnail-attester \
+  kexec-tools \
 "
