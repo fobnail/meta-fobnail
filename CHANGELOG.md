@@ -4,6 +4,11 @@ Project. Able to run on PC Engines apu2.
 
 ## [Unreleased]
 
+## [0.1.3] - 2022-05-16
+### Added
+
+- `kexec` tools package
+
 ## [0.1.2] - 2022-05-06
 ### Added
 
