@@ -8,6 +8,7 @@ Project. Able to run on PC Engines apu2.
 ### Added
 
 - `kexec` tools package
+- systemd service config file to run `fobnail-attester` on autostart
 
 ## [0.1.2] - 2022-05-06
 ### Added
