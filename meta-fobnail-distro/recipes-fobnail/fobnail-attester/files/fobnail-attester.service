@@ -1,0 +1,10 @@
+[Unit]
+Description=fobnail attester service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/fobnail-attester
+StandardOutput=journal+console
+
+[Install]
+WantedBy=multi-user.target
