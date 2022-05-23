@@ -1,5 +1,5 @@
-SUMMARY = "fobnail packagegroup"
-DESCRIPTION = "fobnail packagegroup"
+SUMMARY = "Fobnail packagegroup"
+DESCRIPTION = "Fobnail packagegroup"
 
 LICENSE = "MIT"
 

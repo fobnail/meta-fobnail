@@ -1,4 +1,4 @@
-DESCRIPTION = "fobnail image"
+DESCRIPTION = "Fobnail image"
 
 IMAGE_FEATURES += "ssh-server-openssh"
 

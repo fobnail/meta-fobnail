@@ -1,6 +1,6 @@
 DESCRIPTION = " \
-    fobnail-attester is aimed to provide an Attester implementation for \
-    Attestation process which also should include local (and remote) plaform \
+    Fobnail Attester is aimed to provide an attester implementation for \
+    attestation process which also should include local (and remote) plaform \
     provisioning. \
 "
 
