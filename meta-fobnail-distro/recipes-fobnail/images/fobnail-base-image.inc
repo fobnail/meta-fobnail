@@ -11,7 +11,7 @@ IMAGE_INSTALL:append = " \
 "
 
 do_image_wic[depends] += " \
-  landing-zone:do_deploy \
+  skl:do_deploy \
 "
 
 WKS_FILE_DEPENDS:remove = "grub-efi"
