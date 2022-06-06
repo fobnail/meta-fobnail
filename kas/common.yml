@@ -30,7 +30,7 @@ repos:
 
   meta-trenchboot:
     url: https://github.com/3mdeb/meta-trenchboot
-    refspec: 7418f500c9a292eee79efc4afaa6cab6dcd9a128
+    refspec: 72703faf341c02fa72ff067e0b02f6fa26fcd802
 
   meta-security:
     url: https://git.yoctoproject.org/git/meta-security
