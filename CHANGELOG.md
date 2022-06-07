@@ -4,6 +4,12 @@ Project. Able to run on PC Engines apu2.
 
 ## [Unreleased]
 
+## [0.2.1] - 2022-06-06
+### Updated
+
+- GRUB updated
+- Landing Zone replaced by Secure Kernel Loader
+
 ## [0.2.0] - 2022-05-23
 ### Added
 
@@ -28,8 +34,9 @@ Project. Able to run on PC Engines apu2.
 
 - Initial version of meta layer for system image used in the Fobnail Project
 
-[Unreleased]: https://github.com/fobnail/meta-fobnail/compare/v0.1.3...HEAD
-[0.1.3]: https://github.com/fobnail/meta-fobnail/compare/v0.1.2...v0.1.3
+[Unreleased]: https://github.com/fobnail/meta-fobnail/compare/v0.2.1...HEAD
+[0.2.1]: https://github.com/fobnail/meta-fobnail/compare/v0.2.0...v0.2.1
+[0.2.0]: https://github.com/fobnail/meta-fobnail/compare/v0.1.2...v0.2.0
 [0.1.2]: https://github.com/fobnail/meta-fobnail/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/fobnail/meta-fobnail/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/fobnail/meta-fobnail/compare/3274b50a7b5d5a18f97c19412e06e98a7bcdb0d3...v0.1.0
